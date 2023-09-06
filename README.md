@@ -5,7 +5,7 @@ The variable-length codes assigned to input characters are Prefix Codes, means t
 
 To Compress File :
 
-![image](https://github.com/amandeepsirohi/Huffman_Encoding_Decoding/assets/125798090/b802de4e-bb4b-4a0e-8888-a9b23f70d505)
+![image](https://github.com/amandeepsirohi/Huffman_Encoding_Decoding/assets/125798090/f81ae2bf-efef-4fa3-a663-5bc244e77e44)
 
 
 To Decompress File: 
