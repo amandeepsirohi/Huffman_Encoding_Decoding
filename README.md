@@ -1,19 +1,51 @@
+# Huffman coding
+
 Huffman coding is a lossless data compression algorithm. The idea is to assign variable-length codes to input characters, lengths of the assigned codes are based on the frequencies of corresponding characters. 
 The variable-length codes assigned to input characters are Prefix Codes, means the codes (bit sequences) are assigned in such a way that the code assigned to one character is not the prefix of code assigned to any other character.
-
-CLI Tool to compress data through Huffman coding
 
 
 ![1fEJE](https://github.com/amandeepsirohi/Huffman_Encoding_Decoding/assets/125798090/5e25c80b-8f86-45b5-9685-5ef32e6c4954)
 
-To Compress File :
+## Usage
+clone the repo
+```console
+git clone https://github.com/amandeepsirohi/Huffman_Encoding_Decoding.git --depth=1
+```
 
-![image](https://github.com/amandeepsirohi/Huffman_Encoding_Decoding/assets/125798090/f81ae2bf-efef-4fa3-a663-5bc244e77e44)
+## Building
+```console
+g++ huffman_main.cpp encode_text.cpp -o huff-encode
+```
 
+## Test on random text file
+create text file with 500000 lines of random strings
+```console
+cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 32 | head -n 500000 > input.txt
+```
 
-To Decompress File: 
+compress `input.txt` file
+```console
+huff-encode input.txt out.txt
+```
 
-![image](https://github.com/amandeepsirohi/Huffman_Encoding_Decoding/assets/125798090/8b1b18ab-063e-4dbf-8697-d3a7fbb08200)
+## compare size
+```console
+du -h input.txt
+16M    input.txt
+```
 
+```console
+du -h input.txt
+11M    out.txt
+```
 
-![image](https://github.com/amandeepsirohi/Huffman_Encoding_Decoding/assets/125798090/8d3f0342-00a6-4dd7-b82b-d718296d478a)
+## decompress file
+build decoder
+```console
+g++ huffman_main.cpp decode_text.cpp -o huff-decode
+```
+
+decompress `out.txt` file
+```console
+huff-encode compressed.huff out.txt
+```
