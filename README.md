@@ -35,7 +35,7 @@ du -h input.txt
 ```
 
 ```console
-du -h input.txt
+du -h out.txt
 11M    out.txt
 ```
 
