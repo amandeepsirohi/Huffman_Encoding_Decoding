@@ -69,7 +69,7 @@ class huffman {
         //Saving Decoded File to obtain the original File
         void saveDecodedFile();
         
-        //Reading the file to reconstruct the Huffman tree
+        //Reading the file to reconstruct the Huffman trees
         void getTree();
 
     public:
