@@ -2,9 +2,40 @@
 This repository contains a C++ implementation of Huffman encoding and decoding algorithms. Huffman coding is a popular technique for lossless data compression. It assigns variable-length codes to different characters, with shorter codes for more frequently occurring characters. This leads to efficient encoding for commonly used characters, resulting in compression.
 
 
+## Here's a simple example to illustrate the Huffman coding process:
+
+Suppose we have the input data "ABBCCCDDDD". The frequency table would be:
+
+| Character  |   Frequency  | 
+| :------------ |:---------------:| 
+| A     | 1| 
+| B    | 2     |   
+| C | 3   |
+| D | 4|
+
+Following the algorithm described above, we construct the Huffman tree
+
+  ```bash       
+       (10)
+      /   \
+   (4)D   (6)
+         /   \
+      (3)C   (3)
+           /   \
+        (1)A   (2)B 
+```
+
+and assign the following Huffman codes:
+
+| Character  |   Frequency  | 
+| :------------ |:---------------:| 
+| A     | 0|
+| B    | 10     |   
+| C | 110   |
+| D | 111|
 
 
-![1fEJE](https://github.com/amandeepsirohi/Huffman_Encoding_Decoding/assets/125798090/5e25c80b-8f86-45b5-9685-5ef32e6c4954)
+This is a simplified example, but it demonstrates the basic structure and steps involved in Huffman coding. Keep in mind that in real-world scenarios, more complex data structures and algorithms may be used for efficiency and optimization.
 
 ## Usage
 clone the repo
